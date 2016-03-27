@@ -52,6 +52,9 @@ TARGET_CONTINUOUS_SPLASH_ENABLED := false
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.wt88047
 
+# Tap-to-Wake
+TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
+
 # Camera
 BOARD_CAMERA_SENSORS := \
     ov2680_5987fhq \
