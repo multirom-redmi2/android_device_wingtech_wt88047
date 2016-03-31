@@ -78,6 +78,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ums=ff20 \
     ro.usb.id.ums_adb=ff28
 
+# HW Compositing
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_hwc=1
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916

@@ -28,12 +28,19 @@ BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8916
 TARGET_KERNEL_CONFIG := cyanogenmod_wt88047_defconfig
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Rom Toolchain
+TARGET_GCC_VERSION_EXP := 4.9-uber
+
 # CPU
 TARGET_CPU_CORTEX_A53 := true
 
 # WT88047 init
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_wt88047.cpp
-TARGET_UNIFIED_DEVICE := true
+TARGET_UNIFIED_DEVICE :=
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -52,9 +59,6 @@ BOARD_CAMERA_SENSORS := \
     ov2680_skuhf
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-
-# Disable Jack & Jill compilation
-ANDROID_COMPILE_WITH_JACK := false
 
 # DPM NSRM Feature
 TARGET_LDPRELOAD := libNimsWrap.so
