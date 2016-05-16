@@ -1,0 +1,1278 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty (premaca@paluguUB) (gcc version 4.8 (GCC) ) #10 SMP PREEMPT Mon May 16 01:45:02 IST 2016
+[    0.000000] CPU: ARMv7 Processor [410fd030] revision 0 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: Qualcomm Technologies, Inc. MSM 8916 (Flattened Device Tree), model: Qualcomm Technologies, Inc. MSM 8916 QRD SKUI
+[    0.000000] msm8916_dt_reserve:62 Dumping Memblock Stats.....
+[    0.000000] MEMBLOCK configuration:
+[    0.000000]  memory size = 0x7fffffff reserved size = 0x150852e
+[    0.000000]  memory.cnt  = 0x1
+[    0.000000]  memory[0x0]	[0x00000080000000-0x000000fffffffe], 0x7fffffff bytes
+[    0.000000]  reserved.cnt  = 0x3
+[    0.000000]  reserved[0x0]	[0x00000080004000-0x00000080007fff], 0x4000 bytes
+[    0.000000]  reserved[0x1]	[0x00000080100000-0x00000081528c47], 0x1428c48 bytes
+[    0.000000]  reserved[0x2]	[0x00000082000000-0x000000820db8e5], 0xdb8e6 bytes
+[    0.000000] cma: Found external_image__region@0, memory base 0x86000000, size 8 MiB, limit 0xffffffff
+[    0.000000] cma: Found modem_adsp_region@0, memory base 0x86800000, size 85 MiB, limit 0xffffffff
+[    0.000000] cma: Found pheripheral_region@0, memory base 0x8bd00000, size 6 MiB, limit 0xffffffff
+[    0.000000] cma: Found hardboot_region@0, memory base 0x8c300000, size 1 MiB, limit 0xffffffff
+[    0.000000] cma: Found mba_region@0, memory base 0x00000000, size 2 MiB, limit 0xffffffff
+[    0.000000] cma: Found venus_qseecom_region@0, memory base 0x00000000, size 18 MiB, limit 0x90000000
+[    0.000000] cma: Found audio_region@0, memory base 0x00000000, size 3 MiB, limit 0xffffffff
+[    0.000000] cma: Found splash_region@83000000, memory base 0x83000000, size 20 MiB, limit 0xffffffff
+[    0.000000] cma: Found pstore_reserve_region@0, memory base 0x8c400000, size 1 MiB, limit 0xffffffff
+[    0.000000] cma: CMA: reserved 8 MiB at 0x86000000 for external_image_mem
+[    0.000000] cma: CMA: reserved 85 MiB at 0x86800000 for modem_adsp_mem
+[    0.000000] cma: CMA: reserved 6 MiB at 0x8bd00000 for peripheral_mem
+[    0.000000] cma: CMA: reserved 1 MiB at 0x8c300000 for hardboot_mem
+[    0.000000] cma: CMA: reserved 4 MiB at 0xff800000 for mba_mem
+[    0.000000] cma: CMA: reserved 20 MiB at 0x8ec00000 for venus_qseecom_mem
+[    0.000000] cma: CMA: reserved 4 MiB at 0xff400000 for audio_mem
+[    0.000000] cma: CMA: reserved 20 MiB at 0x83000000 for cont_splash_mem
+[    0.000000] cma: CMA: reserved 1 MiB at 0x8c400000 for pstore_reserve_mem
+[    0.000000] cma: CMA: reserved 8 MiB at 0xaf000000 for default region
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] PERCPU: Embedded 12 pages/cpu @c564e000 s33088 r0 d16064 u49152
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 496721
+[    0.000000] Kernel command line: console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 phy-msm-usb.floated_charger_enable=1 androidboot.emmc=true androidboot.serialno=2d00840b androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_otm1285a_otp_720p_video board_id=S88047C1:board_vol=1050462
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1895724K/1993724K available (11604K kernel code, 1006K rwdata, 4272K rodata, 1088K init, 2156K bss, 98000K reserved, 1310716K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc1081168   (16869 kB)
+[    0.000000]       .init : 0xc1100000 - 0xc1210140   (1089 kB)
+[    0.000000]       .data : 0xc1212000 - 0xc130d8dc   (1007 kB)
+[    0.000000]        .bss : 0xc130d9a0 - 0xc1528c48   (2157 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Architected cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 3579139424256ns
+[    0.000000] Switching to timer-based delay loop
+[    0.000000] sched_clock: 32 bits at 19MHz, resolution 52ns, wraps every 223696213963ns
+[    0.000428] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000440] pid_max: default: 32768 minimum: 301
+[    0.000597] Security Framework initialized
+[    0.000611] SELinux:  Initializing.
+[    0.000700] Mount-cache hash table entries: 512
+[    0.040507] Initializing cgroup subsys debug
+[    0.040525] Initializing cgroup subsys freezer
+[    0.040533] Initializing cgroup subsys bfqio
+[    0.040571] CPU: Testing write buffer coherency: ok
+[    0.040918] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.040995] Setting up static identity map for 0xc0b7c0b0 - 0xc0b7c108
+[    0.041733] ftrace: Allocated trace_printk buffers
+[    0.042639] MSM Memory Dump base table set up
+[    0.042662] MSM Memory Dump apps data table set up
+[    0.043966] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.044907] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.045812] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.045930] Brought up 4 CPUs
+[    0.045951] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.045957] CPU: All CPU(s) started in SVC mode.
+[    0.057512] VFP support v0.3: implementor 41 architecture 3 part 40 variant 3 rev 0
+[    0.057532] ------------[ cut here ]------------
+[    0.057551] WARNING: at ../../../../../../kernel/cyanogen/msm8916/fs/proc/generic.c:102 __xlate_proc_name+0xa0/0xb4()
+[    0.057558] name 'cpu/vfp_bounce'
+[    0.057569] CPU: 0 PID: 1 Comm: swapper/0 Not tainted 3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[    0.057594] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[    0.057611] [<c0109368>] (show_stack+0x10/0x14) from [<c01207a0>] (warn_slowpath_common+0x48/0x68)
+[    0.057627] [<c01207a0>] (warn_slowpath_common+0x48/0x68) from [<c0120818>] (warn_slowpath_fmt+0x2c/0x3c)
+[    0.057643] [<c0120818>] (warn_slowpath_fmt+0x2c/0x3c) from [<c0239630>] (__xlate_proc_name+0xa0/0xb4)
+[    0.057661] [<c0239630>] (__xlate_proc_name+0xa0/0xb4) from [<c0239690>] (__proc_create+0x4c/0xdc)
+[    0.057678] [<c0239690>] (__proc_create+0x4c/0xdc) from [<c0239b78>] (proc_create_data+0x58/0x98)
+[    0.057696] [<c0239b78>] (proc_create_data+0x58/0x98) from [<c1102ecc>] (vfp_init+0x16c/0x1d8)
+[    0.057713] [<c1102ecc>] (vfp_init+0x16c/0x1d8) from [<c1100ad4>] (do_one_initcall+0x8c/0x12c)
+[    0.057731] [<c1100ad4>] (do_one_initcall+0x8c/0x12c) from [<c1100c7c>] (kernel_init_freeable+0x108/0x1cc)
+[    0.057751] [<c1100c7c>] (kernel_init_freeable+0x108/0x1cc) from [<c0b69500>] (kernel_init+0x8/0xe4)
+[    0.057771] [<c0b69500>] (kernel_init+0x8/0xe4) from [<c0105b58>] (ret_from_fork+0x14/0x3c)
+[    0.057802] ---[ end trace 1b75b31a2719ed1c ]---
+[    0.057808] Failed to create procfs node for VFP bounce reporting
+[    0.059646] pinctrl core: initialized pinctrl subsystem
+[    0.059967] regulator-dummy: no parameters
+[    0.061181] NET: Registered protocol family 16
+[    0.063563] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.105053] msm_watchdog b017000.qcom,wdt: wdog absent resource not present
+[    0.105231] msm_watchdog b017000.qcom,wdt: MSM Watchdog Initialized
+[    0.109227] spmi_pmic_arb 200f000.qcom,spmi: PMIC Arb Version-2 0x20010000
+[    0.113060] cma: Assigned CMA region at 0 to 1de0000.qcom,venus device
+[    0.113460] cma: Assigned CMA region at 0 to 4080000.qcom,mss device
+[    0.113810] cma: Assigned CMA region at 0 to a21b000.qcom,pronto device
+[    0.114363] ACC: mem_acc_efuse_init: efuse_addr = 0x00058000 (len=0x1000)
+[    0.114402] ACC: mem_acc_fuse_is_setting_expected: [row:0] = 0x4826008000d00705 @52:1 == 1 ?: no
+[    0.114492] mem_acc_corner: 0 <--> 0 mV 
+[    0.117361] console [pstore-1] enabled
+[    0.117371] ramoops: attached 0x100000@0x8c400000, ecc: 0/0
+[    0.119908] KPI: Bootloader start count = 15373
+[    0.119919] KPI: Bootloader end count = 73331
+[    0.119926] KPI: Bootloader display count = 61321
+[    0.119933] KPI: Bootloader load kernel count = 1924
+[    0.119942] KPI: Kernel MPM timestamp = 106678
+[    0.119949] KPI: Kernel MPM Clock frequency = 32768
+[    0.119969] socinfo_print: v8, id=206, ver=1.0, raw_id=1797, raw_ver=0, hw_plat=11, hw_plat_ver=65537
+[    0.119969]  accessory_chip=0, hw_plat_subtype=7, pmic_model=65547, pmic_die_revision=131072
+[    0.120613] smd_channel_probe_worker: allocation table not initialized
+[    0.120718] smd_channel_probe_worker: allocation table not initialized
+[    0.125203] No ATAGs?
+[    0.125606] msm_mpm_dev_probe(): Cannot get clk resource for XO
+[    0.125631] platform 601d0.qcom,mpm: Driver mpm-v2 requests probe deferral
+[    0.126825] 8916_s1_corner: 0 <--> 0 mV at 0 mV normal idle 
+[    0.127180] 8916_s1_corner_ao: 0 <--> 0 mV at 0 mV normal idle 
+[    0.127513] 8916_s1_floor_corner: 0 <--> 0 mV at 0 mV normal idle 
+[    0.127875] 8916_s3: 1200 <--> 1300 mV at 1200 mV normal idle 
+[    0.128231] 8916_s4: 1800 <--> 2100 mV at 1800 mV normal idle 
+[    0.128568] 8916_l1: 1225 mV normal idle 
+[    0.128928] 8916_l2: 1200 mV normal idle 
+[    0.129267] 8916_l3: 500 <--> 1287 mV at 0 mV normal idle 
+[    0.129595] 8916_l3_corner_ao: 0 <--> 0 mV at 0 mV normal idle 
+[    0.129992] 8916_l3_corner_so: 0 <--> 0 mV at 0 mV normal idle 
+[    0.130343] 8916_l4: 2050 mV normal idle 
+[    0.130713] 8916_l5: 1800 mV normal idle 
+[    0.131062] 8916_l6: 1800 mV normal idle 
+[    0.131437] 8916_l7: 1800 mV normal idle 
+[    0.131780] 8916_l7_ao: 1800 mV normal idle 
+[    0.132119] 8916_l7_so: 1800 mV normal idle 
+[    0.132494] 8916_l8: 2850 <--> 2900 mV at 2850 mV normal idle 
+[    0.132857] 8916_l9: 3300 mV normal idle 
+[    0.133231] 8916_l10: 2700 <--> 2800 mV at 2700 mV normal idle 
+[    0.133607] 8916_l11: 1800 <--> 3300 mV at 3000 mV normal idle 
+[    0.133972] 8916_l12: 1800 <--> 2950 mV at 1800 mV normal idle 
+[    0.134350] 8916_l13: 3075 mV normal idle 
+[    0.134739] 8916_l14: 1800 <--> 3300 mV at 1800 mV normal idle 
+[    0.135108] 8916_l15: 1800 <--> 3300 mV at 1800 mV normal idle 
+[    0.136025] 8916_l16: 2600 <--> 3300 mV at 2600 mV normal idle 
+[    0.136413] 8916_l17: 2850 mV normal idle 
+[    0.136804] 8916_l18: 2700 mV normal idle 
+[    0.137244] 8916_s2: 1050 <--> 1350 mV at 1150 mV 
+[    0.137344] spm_regulator_probe: name=8916_s2, range=LV, voltage=1150000 uV, mode=PWM, step rate=1200 uV/us
+[    0.137924] cpr_efuse_init: apc_corner: efuse_addr = 0x00058000 (len=0x1000)
+[    0.137968] cpr_parse_speed_bin_fuse: apc_corner: [row: 1]: 0x210f79e447, speed_bits = 0
+[    0.137987] cpr_parse_pvs_version_fuse: apc_corner: [row: 0]: 0x4826008000d00705, pvs_version = 0
+[    0.138079] cpr_pvs_init: apc_corner: pvs voltage: [1050000 1100000 1250000] uV
+[    0.138091] cpr_pvs_init: apc_corner: ceiling voltage: [1050000 1150000 1350000] uV
+[    0.138102] cpr_pvs_init: apc_corner: floor voltage: [1050000 1050000 1162500] uV
+[    0.138333] cpr_init_cpr_efuse: apc_corner: [row:27] = 0x988d7e035f9920ab
+[    0.138357] cpr_init_cpr_efuse: apc_corner: CPR disable fuse = 0
+[    0.138371] cpr_init_cpr_efuse: apc_corner: Corner[1]: ro_sel = 2, target quot = 863
+[    0.138384] cpr_init_cpr_efuse: apc_corner: Corner[2]: ro_sel = 2, target quot = 863
+[    0.138397] cpr_init_cpr_efuse: apc_corner: Corner[3]: ro_sel = 2, target quot = 1154
+[    0.138456] cpr_get_corner_quot_adjustment: apc_corner: fuse corner 2 quotient adjustment scaling factor: 0.000
+[    0.138466] cpr_get_corner_quot_adjustment: apc_corner: fuse corner 3 quotient adjustment scaling factor: 0.650
+[    0.138481] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[1] = 863
+[    0.138490] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[2] = 863
+[    0.138499] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[3] = 863
+[    0.138507] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[4] = 863
+[    0.138516] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[5] = 1017
+[    0.138524] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[6] = 1080
+[    0.138533] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[7] = 1117
+[    0.138542] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[8] = 1154
+[    0.138551] cpr_get_corner_quot_adjustment: apc_corner: adjusted quotient[9] = 1154
+[    0.138600] cpr_populate_opp_table: apc_corner: adding OPP entry failed - OPP may not be enabled, rc=-22
+[    0.138641] cpr_init_cpr_parameters: apc_corner: up threshold = 0, down threshold = 2
+[    0.138670] cpr_init_cpr_parameters: apc_corner: CPR is enabled by default.
+[    0.138681] cpr_config: apc_corner: Timer count: 0x17700 (for 5000 us)
+[    0.138908] apc_corner: 0 <--> 0 mV 
+[    0.139546] i2c-msm-v2 78b6000.i2c: probing driver i2c-msm-v2
+[    0.139636] i2c-msm-v2 78b6000.i2c: error on clk_get(core_clk):-517
+[    0.139650] i2c-msm-v2 78b6000.i2c: error probe() failed with err:-517
+[    0.139673] platform 78b6000.i2c: Driver i2c-msm-v2 requests probe deferral
+[    0.139817] i2c-msm-v2 78b9000.i2c: probing driver i2c-msm-v2
+[    0.139890] i2c-msm-v2 78b9000.i2c: error on clk_get(core_clk):-517
+[    0.139904] i2c-msm-v2 78b9000.i2c: error probe() failed with err:-517
+[    0.139922] platform 78b9000.i2c: Driver i2c-msm-v2 requests probe deferral
+[    0.140022] i2c-msm-v2 78ba000.i2c: probing driver i2c-msm-v2
+[    0.140089] i2c-msm-v2 78ba000.i2c: error on clk_get(core_clk):-517
+[    0.140101] i2c-msm-v2 78ba000.i2c: error probe() failed with err:-517
+[    0.140119] platform 78ba000.i2c: Driver i2c-msm-v2 requests probe deferral
+[    0.140247] i2c-msm-v2 78b8000.i2c: probing driver i2c-msm-v2
+[    0.140314] i2c-msm-v2 78b8000.i2c: error on clk_get(core_clk):-517
+[    0.140326] i2c-msm-v2 78b8000.i2c: error probe() failed with err:-517
+[    0.140344] platform 78b8000.i2c: Driver i2c-msm-v2 requests probe deferral
+[    0.142413] msm-thermal qcom,msm-thermal.58: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,rpm-phase-resource-type err=-22. KTM continues
+[    0.142434] msm-thermal qcom,msm-thermal.58: msm_thermal:Failed reading node=/soc/qcom,msm-thermal, key=qcom,gfx-sensor-id. err=-22. KTM continues
+[    0.142450] msm-thermal qcom,msm-thermal.58: probe_therm_reset:Failed reading node=/soc/qcom,msm-thermal, key=qcom,therm-reset-temp err=-22. KTM continues
+[    0.142468] msm-thermal qcom,msm-thermal.58: probe_vdd_mx:Failed reading node=/soc/qcom,msm-thermal, key=qcom,mx-restriction-temp. KTM continues
+[    0.142486] msm-thermal qcom,msm-thermal.58: probe_psm:Failed reading node=/soc/qcom,msm-thermal, key=qcom,pmic-sw-mode-temp. err=-22. KTM continues
+[    0.142744] msm_thermal:vdd_restriction_reg_init Defer vdd rstr freq init.
+[    0.143145] msm-thermal qcom,msm-thermal.58: probe_sensor_info:unable to find DT for sensor-information.KTM continues
+[    0.143166] msm-thermal qcom,msm-thermal.58: probe_ocr:Failed reading node=/soc/qcom,msm-thermal, key=qcom,pmic-opt-curr-temp err:-22. KTM continues
+[    0.143848] sps:sps is ready.
+[    0.149309] qcom,rpmcc-8916 1800000.qcom,rpmcc: Registered RPM clocks.
+[    0.156422] qcom,gcc-8916 1800000.qcom,gcc: Registered GCC clocks
+[    0.158294] clock-a7 b011050.qcom,clock-a7: Speed bin: 0 PVS Version: 1
+[    0.160434] i2c-msm-v2 78b6000.i2c: probing driver i2c-msm-v2
+[    0.160547] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.160560] i2c-msm-v2 78b6000.i2c: msm_bus_scale_register_client(mstr-id:86):0 (not a problem)
+[    0.161256] i2c-msm-v2 78b9000.i2c: probing driver i2c-msm-v2
+[    0.161353] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.161365] i2c-msm-v2 78b9000.i2c: msm_bus_scale_register_client(mstr-id:86):0 (not a problem)
+[    0.161766] i2c-msm-v2 78ba000.i2c: probing driver i2c-msm-v2
+[    0.161859] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.161871] i2c-msm-v2 78ba000.i2c: msm_bus_scale_register_client(mstr-id:86):0 (not a problem)
+[    0.162287] i2c-msm-v2 78b8000.i2c: probing driver i2c-msm-v2
+[    0.162378] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.162390] i2c-msm-v2 78b8000.i2c: msm_bus_scale_register_client(mstr-id:86):0 (not a problem)
+[    0.188410] bio: create slab <bio-0> at 0
+[    0.190728] SCSI subsystem initialized
+[    0.191227] usbcore: registered new interface driver usbfs
+[    0.191268] usbcore: registered new interface driver hub
+[    0.191362] usbcore: registered new device driver usb
+[    0.191455] media: Linux media interface: v0.10
+[    0.191495] Linux video capture interface: v2.00
+[    0.192843] cma: Assigned CMA region at 0 to 1b.qcom,ion-heap device
+[    0.193010] cma: Assigned CMA region at 0 to 1c.qcom,ion-heap device
+[    0.193171] cma: Assigned CMA region at 0 to 17.qcom,ion-heap device
+[    0.193318] cma: Assigned CMA region at 0 to 1a.qcom,ion-heap device
+[    0.193473] ION heap system created
+[    0.193551] ION heap kmalloc created
+[    0.193564] ION heap qsecom created at 0x8ec00000 with size 1200000
+[    0.193575] ION heap audio created at 0xff400000 with size 314000
+[    0.193585] ION heap pil_1 created at 0x8bd00000 with size 600000
+[    0.193596] ION heap pil_2 created at 0x86800000 with size 5500000
+[    0.193689] msm_bus_fabric_init_driver
+[    0.193835] msm_bus_device 580000.ad-hoc-bus: Dev 1024
+[    0.193850] msm_bus_device 580000.ad-hoc-bus: Util-fact is missing, default to 100
+[    0.193858] msm_bus_device 580000.ad-hoc-bus: Vrail-comp is missing, default to 100
+[    0.193918] msm_bus_device 580000.ad-hoc-bus: Dev 0
+[    0.193930] msm_bus_device 580000.ad-hoc-bus: Util-fact is missing, default to 100
+[    0.193938] msm_bus_device 580000.ad-hoc-bus: Vrail-comp is missing, default to 100
+[    0.193994] msm_bus_device 580000.ad-hoc-bus: Dev 4096
+[    0.194007] msm_bus_device 580000.ad-hoc-bus: Util-fact is missing, default to 100
+[    0.194015] msm_bus_device 580000.ad-hoc-bus: Vrail-comp is missing, default to 100
+[    0.196532] msm_bus_init_clk: Valid node clk node 1024 ctx 0
+[    0.196538] msm_bus_init_clk: Valid node clk node 1024 ctx 1msm_bus_init_clk: Valid node clk node 0 ctx 0
+[    0.196592] msm_bus_init_clk: Valid node clk node 0 ctx 1msm_bus_init_clk: Valid node clk node 4096 ctx 0
+[    0.196643] msm_bus_init_clk: Valid node clk node 4096 ctx 1[    0.201344] gdsc_venus: no parameters
+[    0.201524] gdsc_mdss: no parameters
+[    0.201689] gdsc_jpeg: no parameters
+[    0.201836] gdsc_vfe: no parameters
+[    0.202015] gdsc_oxili_gx: no parameters
+[    0.202568] mdss_pll_probe: MDSS pll label = MDSS DSI 0 PLL
+[    0.203047] dsi_pll_clock_register_lpm: Registered DSI PLL clocks successfully
+[    0.203835] msm_iommu 1f00000.qcom,iommu: device gfx_iommu (model: 500) mapped at f02a0000, with 2 ctx banks
+[    0.204398] msm_iommu 1e00000.qcom,iommu: device apps_iommu (model: 500) mapped at f0780000, with 20 ctx banks
+[    0.208342] msm_iommu_ctx 1f09000.qcom,iommu-ctx: context gfx3d_user using bank 1
+[    0.208429] msm_iommu_ctx 1f0a000.qcom,iommu-ctx: context gfx3d_priv using bank 2
+[    0.208505] msm_iommu_ctx 1e22000.qcom,iommu-ctx: context jpeg_enc0 using bank 2
+[    0.208571] msm_iommu_ctx 1e23000.qcom,iommu-ctx: context vfe using bank 3
+[    0.208634] msm_iommu_ctx 1e24000.qcom,iommu-ctx: context mdp_0 using bank 4
+[    0.208702] msm_iommu_ctx 1e25000.qcom,iommu-ctx: context venus_ns using bank 5
+[    0.208770] msm_iommu_ctx 1e26000.qcom,iommu-ctx: context cpp using bank 6
+[    0.208833] msm_iommu_ctx 1e27000.qcom,iommu-ctx: context mDSP using bank 7
+[    0.208896] msm_iommu_ctx 1e28000.qcom,iommu-ctx: context gss using bank 8
+[    0.208959] msm_iommu_ctx 1e29000.qcom,iommu-ctx: context a2 using bank 9
+[    0.209022] msm_iommu_ctx 1e32000.qcom,iommu-ctx: context mdp_1 using bank 18
+[    0.209085] msm_iommu_ctx 1e33000.qcom,iommu-ctx: context venus_sec_pixel using bank 19
+[    0.209149] msm_iommu_ctx 1e34000.qcom,iommu-ctx: context venus_sec_bitstream using bank 20
+[    0.209212] msm_iommu_ctx 1e35000.qcom,iommu-ctx: context venus_sec_non_pixel using bank 21
+[    0.209280] msm_iommu_ctx 1e36000.qcom,iommu-ctx: context venus_fw using bank 22
+[    0.209342] msm_iommu_ctx 1e37000.qcom,iommu-ctx: context periph_rpm using bank 23
+[    0.209405] msm_iommu_ctx 1e38000.qcom,iommu-ctx: context periph_CE using bank 24
+[    0.209467] msm_iommu_ctx 1e39000.qcom,iommu-ctx: context periph_BLSP using bank 25
+[    0.209531] msm_iommu_ctx 1e3a000.qcom,iommu-ctx: context periph_SDC1 using bank 26
+[    0.209595] msm_iommu_ctx 1e3b000.qcom,iommu-ctx: context periph_SDC2 using bank 27
+[    0.209659] msm_iommu_ctx 1e3c000.qcom,iommu-ctx: context periph_audio using bank 28
+[    0.209725] msm_iommu_ctx 1e3d000.qcom,iommu-ctx: context periph_USB_HS1 using bank 29
+[    0.210474] Advanced Linux Sound Architecture Driver Initialized.
+[    0.210879] Bluetooth: Core ver 2.16
+[    0.210913] NET: Registered protocol family 31
+[    0.210919] Bluetooth: HCI device and connection manager initialized
+[    0.210929] Bluetooth: HCI socket layer initialized
+[    0.210937] Bluetooth: L2CAP socket layer initialized
+[    0.210966] Bluetooth: SCO socket layer initialized
+[    0.211154] cfg80211: Calling CRDA to update world regulatory domain
+[    0.211172] cfg80211: World regulatory domain updated:
+[    0.211178] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[    0.211184] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[    0.211191] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[    0.211197] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[    0.211203] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.211210] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.211216] cfg80211:   (5490000 KHz - 5710000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.211222] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[    0.211228] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[    0.211971] Switching to clocksource arch_sys_counter
+[    0.230239] NET: Registered protocol family 2
+[    0.230623] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.230727] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.230822] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.230861] TCP: reno registered
+[    0.230871] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.230896] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.231080] NET: Registered protocol family 1
+[    0.231292] RPC: Registered named UNIX socket transport module.
+[    0.231300] RPC: Registered udp transport module.
+[    0.231305] RPC: Registered tcp transport module.
+[    0.231310] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.231709] gcc-mdss-8916 qcom,gcc-mdss.29: Registered GCC MDSS clocks.
+[    0.232463] Trying to unpack rootfs image as initramfs...
+[    0.271709] Freeing initrd memory: 876K (c2000000 - c20db000)
+[    0.274975] hw perfevents: enabled with ARMv8 Cortex-A53 PMU driver, 7 counters available
+[    0.276743] audit: initializing netlink socket (disabled)
+[    0.276773] type=2000 audit(0.249:1): initialized
+[    0.277309] bounce pool size: 64 pages
+[    0.281599] fuse init (API version 7.23)
+[    0.282050] msgmni has been set to 1202
+[    0.283545] Key type asymmetric registered
+[    0.283554] Asymmetric key parser 'x509' registered
+[    0.283660] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    0.283667] io scheduler noop registered (default)
+[    0.283673] io scheduler deadline registered
+[    0.283685] io scheduler row registered
+[    0.283767] io scheduler cfq registered
+[    0.283850] io scheduler bfq registered
+[    0.283855] BFQ I/O-scheduler: v7r8
+[    0.285695] platform qcom,smp2pgpio-ssr-smp2p-1-in.12: Driver smp2pgpio requests probe deferral
+[    0.285816] platform qcom,smp2pgpio-ssr-smp2p-1-out.13: Driver smp2pgpio requests probe deferral
+[    0.286503] platform qcom,smp2pgpio-ssr-smp2p-4-in.18: Driver smp2pgpio requests probe deferral
+[    0.286622] platform qcom,smp2pgpio-ssr-smp2p-4-out.19: Driver smp2pgpio requests probe deferral
+[    0.287116] msm_dss_get_res_byname: 'vbif_nrt_phys' resource not found
+[    0.287131] mdss_mdp_probe+0x15c/0x9ac->msm_dss_ioremap_byname: 'vbif_nrt_phys' msm_dss_get_res_byname failed
+[    0.287142] mdss_mdp_parse_dt_hw_settings: MDSS VBIF settings not found
+[    0.287169] mdss_mdp_parse_dt_prop_len: prop qcom,mdss-pipe-cursor-off : doesn't exist in device tree
+[    0.287211] mdss_mdp_pipe_addr_setup: type:1 ftchid:1 xinid:0 num:0 ndx:0x1 prio:0
+[    0.287224] mdss_mdp_pipe_addr_setup: type:2 ftchid:7 xinid:1 num:3 ndx:0x8 prio:1
+[    0.287231] mdss_mdp_pipe_addr_setup: type:2 ftchid:8 xinid:5 num:4 ndx:0x10 prio:2
+[    0.287245] mdss_mdp_pipe_addr_setup: type:3 ftchid:4 xinid:2 num:6 ndx:0x40 prio:3
+[    0.287266] mdss_mdp_parse_dt_handler: Error from prop qcom,mdss-pipe-sw-reset-off : u32 array read
+[    0.287448] mdss_mdp_parse_dt_handler: Error from prop qcom,mdss-ib-factor-overlap : u32 array read
+[    0.287459] mdss_mdp_parse_dt_handler: Error from prop qcom,mdss-ib-factor-cmd : u32 array read
+[    0.287476] mdss_mdp_parse_dt_prop_len: prop qcom,mdss-clk-levels : doesn't exist in device tree
+[    0.287505] mdss_mdp_parse_dt_prop_len: prop qcom,mdss-ad-off : doesn't exist in device tree
+[    0.287841] mdss_mdp_irq_clk_register: unable to get clk: lut_clk
+[    0.289371] mdss_dsi_ctrl_probe: DSI Ctrl name = MDSS DSI CTRL->0
+[    0.289481] mdss_dsi_panel_init: Panel Name = otm1285a_otp_720p_video_EBBG
+[    0.289847] mdss_dsi_parse_dcs_cmds: failed, key=qcom,mdss-dsi-post-panel-on-command
+[    0.289866] mdss_dsi_parse_dcs_cmds: failed, key=qcom,mdss-dsi-panel-status-command
+[    0.289903] mdss_dsi_parse_panel_features: ulps feature disabled
+[    0.289914] mdss_dsi_parse_panel_features: ulps during suspend feature disabled
+[    0.289923] mdss_dsi_parse_panel_features: dynamic switch feature enabled: 0
+[    0.289940] mdss_dsi_parse_panel_features:1221, Disp_en gpio not specified
+[    0.289979] mdss_dsi_panel_init: Continuous splash enabled
+[    0.290223] dsi_panel_device_register:1863, Disp_en gpio not specified
+[    0.290235] dsi_panel_device_register:1871, TE gpio not specified
+[    0.290246] dsi_panel_device_register: bklt_en gpio not specified
+[    0.290487] mdss_dsi_pll_1_clk_init: can't find vco_clk. rc=-517
+[    0.290491] PLL 1 Clock's did not register
+[    0.290514] mdss_dsi_retrieve_ctrl_resources: ctrl_base=f0122000 ctrl_size=25c phy_base=f013c500 phy_size=2b0
+[    0.290522] dsi_panel_device_register: Using default BTA for ESD check
+[    0.312690] mdss_register_panel: adding framebuffer device 1a98000.qcom,mdss_dsi
+[    0.312874] mdss_hw_rev_init: MDP Rev=10060000
+[    0.313246] mdss_dsi_status_init: DSI status check interval:5000
+[    0.313571] mdss_register_panel: adding framebuffer device qcom,mdss_wb_panel.24
+[    0.314402] mdss_fb_register: FrameBuffer[0] 720x1280 registered successfully!
+[    0.314726] mdss_fb_register: FrameBuffer[1] 1280x720 registered successfully!
+[    0.314789] mdss_mdp_splash_parse_dt: splash mem child node is not present
+[    0.316226] IPC_RTR: msm_ipc_router_smd_driver_register Already driver registered IPCRTR
+[    0.317191] msm_rpm_log_probe: OK
+[    0.318404] NET: Registered protocol family 27
+[    0.320004] In memshare_probe, Memshare probe success
+[    0.321737] subsys-pil-tz a21b000.qcom,pronto: [wcnss]: Error getting proxy unvoting gpio
+[    0.321783] platform a21b000.qcom,pronto: Driver subsys-pil-tz requests probe deferral
+[    0.323139] pil-q6v5-mss 4080000.qcom,mss: [modem]: Error getting proxy unvoting gpio
+[    0.323224] platform 4080000.qcom,mss: Driver pil-q6v5-mss requests probe deferral
+[    0.331893] kgsl kgsl-3d0: Initialized kgsl-3d0: mmu=on
+[    0.337562] brd: module loaded
+[    0.339655] loop: module loaded
+[    0.339974] zram: Created 1 device(s)
+[    0.340295] QSEECOM: qseecom_probe: qseecom.qsee_version = 0x405000
+[    0.340317] QSEECOM: qseecom_probe: disk-encrypt-pipe-pair=0x2
+[    0.340324] QSEECOM: qseecom_probe: Device does not support PFEQSEECOM: qseecom_probe: qsee-ce-hw-instance=0x0
+[    0.340338] QSEECOM: qseecom_probe: qseecom.appsbl_qseecom_support = 0x0[    0.340345] QSEECOM: qseecom_probe: qseecom clocks handled by other subsystem
+[    0.340638] QSEECOM: qseecom_probe: secure app region addr=0x86000000 size=0x300000
+[    0.342134] i2c-core: driver [tabla-i2c-core] using legacy suspend method
+[    0.342143] i2c-core: driver [tabla-i2c-core] using legacy resume method
+[    0.342222] i2c-core: driver [wcd9xxx-i2c-core] using legacy suspend method
+[    0.342228] i2c-core: driver [wcd9xxx-i2c-core] using legacy resume method
+[    0.342303] i2c-core: driver [tasha-i2c-core] using legacy suspend method
+[    0.342309] i2c-core: driver [tasha-i2c-core] using legacy resume method
+[    0.342703] SCSI Media Changer driver v0.25 
+[    0.343600] sps: BAM device 0x07884000 is not registered yet.
+[    0.343612] sps:BAM 0x07884000 is registered.
+[    0.345950] sps:BAM 0x07884000 (va:0xf03c0000) enabled: ver:0x18, number of pipes:16
+[    0.347131] tun: Universal TUN/TAP device driver, 1.6
+[    0.347186] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.349144] PPP generic driver version 2.4.2
+[    0.349225] PPP BSD Compression module registered
+[    0.349231] PPP Deflate Compression module registered
+[    0.349247] PPP MPPE Compression module registered
+[    0.349253] NET: Registered protocol family 24
+[    0.349607] wcnss_wlan probed in built-in mode
+[    0.350100] usbcore: registered new interface driver asix
+[    0.350124] usbcore: registered new interface driver ax88179_178a
+[    0.350147] usbcore: registered new interface driver cdc_ether
+[    0.350173] usbcore: registered new interface driver dm9601
+[    0.350196] usbcore: registered new interface driver net1080
+[    0.350221] usbcore: registered new interface driver cdc_subset
+[    0.350245] usbcore: registered new interface driver zaurus
+[    0.350410] usbcore: registered new interface driver cdc_ncm
+[    0.350686] msm_sharedmem: sharedmem_register_qmi: qmi init successful
+[    0.351008] msm_sharedmem: msm_sharedmem_probe: Device created for client 'rmtfs'
+[    0.351095] msm_sharedmem: msm_sharedmem_probe: Device created for client 'rfsa_dsp'
+[    0.351177] msm_sharedmem: msm_sharedmem_probe: Device created for client 'rfsa_mdm'
+[    0.351263] msm_sharedmem: msm_sharedmem_probe: qcom,client-id property not found
+[    0.351333] msm_sharedmem: msm_sharedmem_probe: Device created for client 'bimc'
+[    0.351641] msm_otg 78d9000.usb: msm_otg probe
+[    0.354273] msm_otg 78d9000.usb: OTG regs = f01e6000
+[    0.355756] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.355764] ehci-msm: Qualcomm On-Chip EHCI Host Controller
+[    0.356030] Unable to get vbus_otg
+[    0.356039] msm_hsusb_host msm_hsusb_host: unable to register with transceiver
+[    0.356057] platform msm_hsusb_host: Driver msm_hsusb_host requests probe deferral
+[    0.356077] ehci-msm2: Qualcomm EHCI Host Controller
+[    0.356510] ice40_spi_probe: ice40_spi_probe failed
+[    0.356881] usbcore: registered new interface driver cdc_acm
+[    0.356887] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.356913] usbcore: registered new interface driver ccid_bridge
+[    0.356987] ccid_bridge_init: success
+[    0.357013] usbcore: registered new interface driver usb-storage
+[    0.357035] usbcore: registered new interface driver ums-alauda
+[    0.357060] usbcore: registered new interface driver ums-cypress
+[    0.357081] usbcore: registered new interface driver ums-datafab
+[    0.357102] usbcore: registered new interface driver ums-freecom
+[    0.357122] usbcore: registered new interface driver ums-isd200
+[    0.357143] usbcore: registered new interface driver ums-jumpshot
+[    0.357166] usbcore: registered new interface driver ums-karma
+[    0.357187] usbcore: registered new interface driver ums-onetouch
+[    0.357209] usbcore: registered new interface driver ums-sddr09
+[    0.357230] usbcore: registered new interface driver ums-sddr55
+[    0.357251] usbcore: registered new interface driver ums-usbat
+[    0.357328] usbcore: registered new interface driver usbserial
+[    0.357351] usbcore: registered new interface driver qc_csvt
+[    0.357374] usbserial: USB Serial support registered for qc_csvt
+[    0.357400] usbcore: registered new interface driver usb_ehset_test
+[    0.358920] mousedev: PS/2 mouse device common for all mice
+[    0.358997] usbcore: registered new interface driver xpad
+[    0.359029] usbcore: registered new interface driver usb_acecad
+[    0.359055] usbcore: registered new interface driver aiptek
+[    0.359081] usbcore: registered new interface driver gtco
+[    0.359107] usbcore: registered new interface driver hanwang
+[    0.359132] usbcore: registered new interface driver kbtab
+[    0.359158] usbcore: registered new interface driver wacom
+[    0.359994] input: ft5x06_ts as /devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0
+[    0.592230] i2c-msm-v2 78b9000.i2c: msm_bus_scale_register_client(mstr-id:86):0x9 (ok)
+[    0.592948] ft5x06_ts 5-0038: Device ID = 0x14
+[    0.593608] ft5x06_ts 5-0038: report rate = 90Hz
+[    0.595295] ft5x06_ts 5-0038: Firmware version = 7.0.0
+[    0.702183] i2c-msm-v2 78b6000.i2c: msm_bus_scale_register_client(mstr-id:86):0xa (ok)
+[    0.710540] input: MPU6050-accel as /devices/soc.0/78b6000.i2c/i2c-0/0-0068/input/input1
+[    0.710716] input: gyroscope as /devices/soc.0/78b6000.i2c/i2c-0/0-0068/input/input2
+[    0.711000] AKM compass driver: initialize.
+[    0.711034] AKM compass driver: initialize.[    0.792165] i2c-msm-v2 78b6000.i2c: NACK: slave not responding, ensure its powered: msgs(n:2 cur:0 tx) bc(rx:2 tx:1) mode:FIFO slv_addr:0xc MSTR_STS:0x0d1343c8 OPER:0x00000010
+[    0.792196] akm09911 0-000c: akm_i2c_rxdata: transfer failed.
+[    0.792270] akm09911: probe of 0-000c failed with error -107
+[    0.792323] yas_probe start.
+[    0.932142] input: compass as /devices/soc.0/78b6000.i2c/i2c-0/0-002e/input/input3
+[    0.937761] yas_probe ok.
+[    0.937904] ltr553 0-0023: read liteon,als-gain failed. Drop to default
+[    0.937915] ltr553 0-0023: read liteon,als-sensitivity failed. Drop to default
+[    1.066145] input: ltr553-light as /devices/soc.0/78b6000.i2c/i2c-0/0-0023/input/input4
+[    1.066294] input: ltr553-proximity as /devices/soc.0/78b6000.i2c/i2c-0/0-0023/input/input5
+[    1.067079] qcom,qpnp-rtc qpnp-rtc-edc21c00: rtc core: registered qpnp_rtc as rtc0
+[    1.067248] i2c /dev entries driver
+[    1.069104] platform 1d00000.qcom,vidc: Driver msm_vidc_v4l2 requests probe deferral
+[    1.069981] msm_cci_probe: pdev ee3db200 device id = -1
+[    1.073625] msm_flash_lm3642_init entry
+[    1.074221] msm_eeprom_parse_memory_map: pageen not needed
+[    1.074237] msm_eeprom_parse_memory_map: pageen not needed
+[    1.074252] msm_eeprom_parse_memory_map: pageen not needed
+[    1.160773] msm_cci_init:781: hw_version = 0x10000008
+[    1.366715] MSM-SENSOR-INIT msm_sensor_init_module:143 MSM_SENSOR_INIT_MODULE   (null)
+[    1.367452] g_sctrl[0] edf96800
+[    1.367656] g_sctrl[1] edf96a00[    1.367988] MSM-CPP cpp_probe:2373 Bus master 0 
+[    1.382553] MSM-CPP cpp_init_hardware:921 CPP HW Version: 0x40010000
+[    1.382563] MSM-CPP cpp_init_hardware:931 stream_cnt:0
+[    1.385328] __msm_jpeg_init:1236] Jpeg Device id 0
+[    1.386539] i2c-msm-v2 78b8000.i2c: msm_bus_scale_register_client(mstr-id:86):0xb (ok)
+[    1.391442] smb1360_otg_vreg: no parameters
+[    1.397637] smb1360-chg-fg 4-0014: SMB1360 revision=0x3 probe success! batt=1 usb=0 soc=97
+[    1.415768] device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+[    1.415878] device-mapper: req-crypt: dm-req-crypt successfully initalized.
+[    1.415878] 
+[    1.416025] cpuidle: using governor ladder
+[    1.416032] cpuidle: using governor menu
+[    1.416055] sdhci: Secure Digital Host Controller Interface driver
+[    1.416060] sdhci: Copyright(c) Pierre Ossman
+[    1.416065] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.419786] sdhci_msm 7824900.sdhci: host_use_default_qos = 1
+[    1.419796] sdhci_msm 7824900.sdhci: For qos_policy(default qos) = 0, tbl_sz = 3, qos type = 2
+[    1.419804] sdhci_msm 7824900.sdhci: 	dma_latency = 2
+[    1.419812] sdhci_msm 7824900.sdhci: 	dma_latency = 401
+[    1.419818] sdhci_msm 7824900.sdhci: 	dma_latency = 701
+[    1.419826] sdhci_msm 7824900.sdhci: For qos_policy(modified dynamic qos) = 1, tbl_sz = 1, qos type = 2
+[    1.419833] sdhci_msm 7824900.sdhci: 	dma_latency = 200
+[    1.419842] sdhci_msm 7824900.sdhci: For qos_policy(modified dynamic qos) = 2, tbl_sz = 1, qos type = 2
+[    1.419849] sdhci_msm 7824900.sdhci: 	dma_latency = 200
+[    1.419855] sdhci_msm 7824900.sdhci: Host using default pm_qos
+[    1.420447] mmc0: no vqmmc regulator found
+[    1.420457] mmc0: no vmmc regulator found
+[    1.448700] mmc0: SDHCI controller on 7824900.sdhci [7824900.sdhci] using 32-bit ADMA
+[    1.455840] sdhci_msm 7864900.sdhci: host_use_default_qos = 1
+[    1.455852] sdhci_msm 7864900.sdhci: For qos_policy(default qos) = 0, tbl_sz = 1, qos type = 2
+[    1.455859] sdhci_msm 7864900.sdhci: 	dma_latency = 701
+[    1.455868] sdhci_msm 7864900.sdhci: For qos_policy(modified dynamic qos) = 1, tbl_sz = 1, qos type = 2
+[    1.455875] sdhci_msm 7864900.sdhci: 	dma_latency = 200
+[    1.455883] sdhci_msm 7864900.sdhci: For qos_policy(modified dynamic qos) = 2, tbl_sz = 1, qos type = 2
+[    1.455890] sdhci_msm 7864900.sdhci: 	dma_latency = 200
+[    1.455897] sdhci_msm 7864900.sdhci: Host using default pm_qos
+[    1.456493] mmc1: no vqmmc regulator found
+[    1.456504] mmc1: no vmmc regulator found
+[    1.487024] mmc1: SDHCI controller on 7864900.sdhci [7864900.sdhci] using 32-bit ADMA
+[    1.487514] i2c-msm-v2 78ba000.i2c: msm_bus_scale_register_client(mstr-id:86):0xe (ok)
+[    1.490694] qce 720000.qcedev: Qualcomm Crypto 5.3.1 device found @0x720000
+[    1.490709] qce 720000.qcedev: CE device = 0x0
+[    1.490709] , IO base, CE = 0xf0740000
+[    1.490709] , Consumer (IN) PIPE 2,    Producer (OUT) PIPE 3
+[    1.490709] IO base BAM = 0x  (null)
+[    1.490709] BAM IRQ 239
+[    1.490709] Engines Availability = 0x2010853
+[    1.490735] sps:BAM 0x00704000 is registered.
+[    1.491453] sps:BAM 0x00704000 (va:0xf0c40000) enabled: ver:0x25, number of pipes:8
+[    1.492269] QCE50: qce_sps_init:  Qualcomm MSM CE-BAM at 0x0000000000704000 irq 239
+[    1.492664] qcedev: FIPS140-2 Known Answer Tests : Skipped
+[    1.493520] qcrypto 720000.qcrypto: Qualcomm Crypto 5.3.1 device found @0x720000
+[    1.493534] qcrypto 720000.qcrypto: CE device = 0x0
+[    1.493534] , IO base, CE = 0xf0c80000
+[    1.493534] , Consumer (IN) PIPE 4,    Producer (OUT) PIPE 5
+[    1.493534] IO base BAM = 0x  (null)
+[    1.493534] BAM IRQ 239
+[    1.493534] Engines Availability = 0x2010853
+[    1.494944] QCE50: qce_sps_init:  Qualcomm MSM CE-BAM at 0x0000000000704000 irq 239
+[    1.495412] qcrypto 720000.qcrypto: qcrypto-ecb-aes
+[    1.495532] qcrypto 720000.qcrypto: qcrypto-cbc-aes
+[    1.495615] qcrypto 720000.qcrypto: qcrypto-ctr-aes
+[    1.495690] qcrypto 720000.qcrypto: qcrypto-ecb-des
+[    1.495762] qcrypto 720000.qcrypto: qcrypto-cbc-des
+[    1.495831] qcrypto 720000.qcrypto: qcrypto-ecb-3des
+[    1.495901] qcrypto 720000.qcrypto: qcrypto-cbc-3des
+[    1.495971] qcrypto 720000.qcrypto: qcrypto-xts-aes
+[    1.496041] qcrypto 720000.qcrypto: qcrypto-sha1
+[    1.496109] qcrypto 720000.qcrypto: qcrypto-sha256
+[    1.496179] qcrypto 720000.qcrypto: qcrypto-aead-hmac-sha1-cbc-aes
+[    1.496247] qcrypto 720000.qcrypto: qcrypto-aead-hmac-sha1-cbc-des
+[    1.496315] qcrypto 720000.qcrypto: qcrypto-aead-hmac-sha1-cbc-3des
+[    1.496383] qcrypto 720000.qcrypto: qcrypto-aead-hmac-sha256-cbc-aes
+[    1.496452] qcrypto 720000.qcrypto: qcrypto-aead-hmac-sha256-cbc-des
+[    1.496521] qcrypto 720000.qcrypto: qcrypto-aead-hmac-sha256-cbc-3des
+[    1.496592] qcrypto 720000.qcrypto: qcrypto-hmac-sha1
+[    1.496661] qcrypto 720000.qcrypto: qcrypto-hmac-sha256
+[    1.496730] qcrypto 720000.qcrypto: qcrypto-aes-ccm
+[    1.496805] qcrypto 720000.qcrypto: qcrypto-rfc4309-aes-ccm
+[    1.496811] qcrypto: FIPS140-2 Known Answer Tests: Skipped
+[    1.497109] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.498312] usbcore: registered new interface driver usbhid
+[    1.498318] usbhid: USB HID core driver
+[    1.498559] ashmem: initialized
+[    1.499109] sps:BAM 0x078c4000 is registered.
+[    1.499415] qcom,qpnp-power-on qpnp-power-on-edc21600: PMIC@SID0 Power-on reason: Triggered from KPD (power key press) and 'warm' boot
+[    1.499434] qcom,qpnp-power-on qpnp-power-on-edc21600: PMIC@SID0: Unknown power-off reason
+[    1.499600] input: qpnp_pon as /devices/virtual/input/input6
+[    1.500972] PMIC@SID0: PM8916 v2.0 options: 0, 2, 0, 0
+[    1.502391] armbw-pm qcom,armbw-pm.31: BW HWmon governor registered.
+[    1.503121] devfreq qcom,cpubw.30: Couldn't update frequency transition information.
+[    1.503660] usbcore: registered new interface driver snd-usb-audio
+[    1.504366] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.504391] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.512530] msm-pcm-lpa qcom,msm-pcm-lpa.39: msm_pcm_probe: dev name qcom,msm-pcm-lpa.39
+[    1.513096] platform qcom,msm-voip-dsp.41: Driver msm-voip-dsp requests probe deferral
+[    1.513381] platform qcom,msm-pcm-voice.42: Driver msm-pcm-voice requests probe deferral
+[    1.516747] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.516769] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.518374] msm8x16-asoc-wcd sound.68: ASoC: platform (null) not registered
+[    1.518403] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.518434] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.518942] u32 classifier
+[    1.518948]     Actions configured
+[    1.518956] Netfilter messages via NETLINK v0.30.
+[    1.519024] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    1.519397] ctnetlink v0.93: registering with nfnetlink.
+[    1.519461] NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+[    1.519467] NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+[    1.519762] xt_time: kernel timezone is -0000
+[    1.520002] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.520159] arp_tables: (C) 2002 David S. Miller
+[    1.520203] TCP: cubic registered
+[    1.520209] Initializing XFRM netlink socket
+[    1.520493] NET: Registered protocol family 10
+[    1.521076] mip6: Mobile IPv6
+[    1.521100] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    1.521204] sit: IPv6 over IPv4 tunneling driver
+[    1.521559] NET: Registered protocol family 17
+[    1.521582] NET: Registered protocol family 15
+[    1.521653] Bridge firewalling registered
+[    1.521663] Ebtables v2.0 registered
+[    1.521800] Bluetooth: RFCOMM TTY layer initialized
+[    1.521821] Bluetooth: RFCOMM socket layer initialized
+[    1.521827] Bluetooth: RFCOMM ver 1.11
+[    1.521833] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    1.521839] Bluetooth: BNEP filters: protocol multicast
+[    1.521848] Bluetooth: BNEP socket layer initialized
+[    1.521854] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    1.521863] Bluetooth: HIDP socket layer initialized
+[    1.521886] l2tp_core: L2TP core driver, V2.0
+[    1.521898] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    1.521903] l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[    1.521916] l2tp_netlink: L2TP netlink interface
+[    1.521938] l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[    1.521954] l2tp_debugfs: L2TP debugfs support
+[    1.521959] l2tp_ip6: L2TP IP encapsulation support for IPv6 (L2TPv3)
+[    1.524921] cma: Assigned CMA region at 0 to qcom,mba-mem.152 device
+[    1.527066] msm_otg 78d9000.usb: phy_reset: success
+[    1.527140] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.527176] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.528699] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.528720] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.530441] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.530468] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.530499] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.530548] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.530581] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.531257] Registering SWP/SWPB emulation handler
+[    1.612845] mem_acc_corner: disabling
+[    1.612857] regulator-dummy: disabling
+[    1.613214] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.613237] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.615031] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.615060] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.615094] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.615157] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.615191] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.616270] file system registered
+[    1.616324] mbim_init: initialize 1 instances
+[    1.616375] mbim_init: Initialized 1 ports
+[    1.616381] mbim_bam_setup: no_ports:1
+[    1.616476] mbim_bam_setup: Initialized 1 ports
+[    1.617229] rndis_qc_init: initialize rndis QC instance
+[    1.617543] android_usb gadget: Mass Storage Function, version: 2009/09/11
+[    1.617551] android_usb gadget: Number of LUNs=3
+[    1.617558]  lun0: LUN: removable file: (no medium)
+[    1.617564]  lun1: LUN: read only CD-ROM file: (no medium)
+[    1.617570]  lun2: LUN: removable file: (no medium)
+[    1.617816] android_usb gadget: android_usb ready
+[    1.617826] msm_hsusb msm_hsusb: [ci13xxx_start] hw_ep_max = 16
+[    1.618190] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.618209] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.619961] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.619987] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.620018] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.620080] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.620113] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.621201] input: gpio-keys as /devices/soc.0/gpio_keys.63/input/input7
+[    1.621604] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.621624] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.622608] qcom,qpnp-rtc qpnp-rtc-edc21c00: setting system clock to 2016-05-16 08:08:26 UTC (1463386106)
+[    1.623423] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.623450] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.623485] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.623555] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.623593] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.623869] msm_thermal:interrupt_mode_init Interrupt mode init
+[    1.624692] /soc/qcom,lpm-levels/qcom,pm-cluster@0: No CPU phandle, assuming single cluster
+[    1.625839] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.625861] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.627377] led_gpio_flash_probe:probe successfully!
+[    1.627746] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.627775] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.627809] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.627887] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.627928] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.628247] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.628268] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.629029] qcom,cc-debug-8916 1874000.qcom,cc-debug: Registered Debug Mux successfully
+[    1.630015] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.630041] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.630073] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.630151] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.630191] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.630486] clock_late_init: Removing enables held for handed-off clocks
+[    1.630514] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.630534] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.632332] msm_bam_device_lpm_ok: Going to LPM now
+[    1.633373] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.633399] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.633699] ALSA device list:
+[    1.633706]   No soundcards found.
+[    1.633790] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.633885] Warning: unable to open an initial console.
+[    1.633955] Freeing unused kernel memory: 64K (c1200000 - c1210000)
+[    1.634971] trampoline: Running trampoline v27
+[    1.635118] trampoline: Initializing devices...
+[    1.635183] trampoline: Scanning mr_init_device for /sys/class/graphics/fb0 (len:23)
+[    1.635196] trampoline: Initializing device /sys/class/graphics/fb0
+[    1.635414] trampoline: Scanning mr_init_device for /sys/devices/virtual/graphics/fb0 (len:33)
+[    1.635428] trampoline: Initializing device /sys/devices/virtual/graphics/fb0
+[    1.635523] trampoline: Scanning mr_init_device for /sys/block/mmcblk0 (len:18)
+[    1.635537] trampoline: Initializing device /sys/block/mmcblk0
+[    1.635561] msm_otg 78d9000.usb: USB in low power mode
+[    1.635568] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci (len:32)
+[    1.635581] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci
+[    1.635673] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/* (len:48)
+[    1.635688] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/
+[    1.635700] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/
+[    1.635815] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0//power
+[    1.635890] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0//clk_scaling
+[    1.635969] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001 (len:56)
+[    1.635983] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001
+[    1.636012] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0 (len:70)
+[    1.636025] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0
+[    1.636054] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p22 (len:81)
+[    1.636067] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p22
+[    1.636094] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p30 (len:81)
+[    1.636108] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p30
+[    1.636135] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p23 (len:81)
+[    1.636149] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p23
+[    1.636177] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24 (len:81)
+[    1.636190] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24
+[    1.636216] trampoline: Scanning mr_init_device for /sys/bus/mmc (len:12)
+[    1.636228] trampoline: Initializing device /sys/bus/mmc
+[    1.636297] trampoline: Scanning mr_init_device for /sys/bus/mmc/drivers/mmcblk (len:27)
+[    1.636310] trampoline: Initializing device /sys/bus/mmc/drivers/mmcblk
+[    1.636380] trampoline: Scanning mr_init_device for /sys/bus/sdio/drivers/bcmsdh_sdmmc (len:34)
+[    1.636393] trampoline: Initializing device /sys/bus/sdio/drivers/bcmsdh_sdmmc
+[    1.636427] trampoline: Scanning mr_init_device for /sys/module/mmc_core (len:20)
+[    1.636439] trampoline: Initializing device /sys/module/mmc_core
+[    1.636480] trampoline: Scanning mr_init_device for /sys/module/mmcblk (len:18)
+[    1.636493] trampoline: Initializing device /sys/module/mmcblk
+[    1.636529] trampoline: Scanning mr_init_device for sys/module/sdhci (len:16)
+[    1.636542] trampoline: Initializing device sys/module/sdhci
+[    1.636578] trampoline: Scanning mr_init_device for sys/module/sdhci/* (len:18)
+[    1.636592] trampoline: Initializing device sys/module/sdhci/
+[    1.636603] trampoline: Initializing device sys/module/sdhci/
+[    1.636644] trampoline: Initializing device sys/module/sdhci//parameters
+[    1.636698] trampoline: Scanning mr_init_device for /sys/module/sdhci_msm (len:21)
+[    1.636710] trampoline: Initializing device /sys/module/sdhci_msm
+[    1.636746] trampoline: Scanning mr_init_device for /sys/module/sdhci_msm/* (len:23)
+[    1.636759] trampoline: Initializing device /sys/module/sdhci_msm/
+[    1.636771] trampoline: Initializing device /sys/module/sdhci_msm/
+[    1.636810] trampoline: Initializing device /sys/module/sdhci_msm//parameters
+[    1.636864] trampoline: Scanning mr_init_device for /sys/devices/virtual/input* (len:27)
+[    1.636877] trampoline: Initializing device /sys/devices/virtual/input
+[    1.636889] trampoline: Initializing device /sys/devices/virtual/input
+[    1.636935] trampoline: Initializing device /sys/devices/virtual/input/mice
+[    1.637057] trampoline: Initializing device /sys/devices/virtual/input/mice/power
+[    1.637131] trampoline: Initializing device /sys/devices/virtual/input/input6
+[    1.637242] trampoline: Initializing device /sys/devices/virtual/input/input6/id
+[    1.637298] trampoline: Initializing device /sys/devices/virtual/input/input6/power
+[    1.637364] trampoline: Initializing device /sys/devices/virtual/input/input6/event6
+[    1.637480] trampoline: Initializing device /sys/devices/virtual/input/input6/event6/power
+[    1.637551] trampoline: Initializing device /sys/devices/virtual/input/input6/capabilities
+[    1.637617] trampoline: Scanning mr_init_device for /sys/devices/virtual/misc/uinput (len:32)
+[    1.637630] trampoline: Initializing device /sys/devices/virtual/misc/uinput
+[    1.637729] trampoline: Scanning mr_init_device for /sys/devices/soc.0/gpio_keys.63/input* (len:38)
+[    1.637744] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input
+[    1.637755] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input
+[    1.637810] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input/input7
+[    1.637920] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input/input7/id
+[    1.637978] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input/input7/power
+[    1.638036] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input/input7/event7
+[    1.638156] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input/input7/event7/power
+[    1.638220] trampoline: Initializing device /sys/devices/soc.0/gpio_keys.63/input/input7/capabilities
+[    1.638291] trampoline: Scanning mr_init_device for /sys/bus/platform/devices/gpio_keys.63/input*/sys/devices/virtual/misc/uinput (len:77)
+[    1.638304] trampoline: Initializing device /sys/bus/platform/devices/gpio_keys.63/input*/sys/devices/virtual/misc/uinput
+[    1.638355] trampoline: Scanning mr_init_device for /sys/devices/virtual/misc/uinput/* (len:34)
+[    1.638368] trampoline: Initializing device /sys/devices/virtual/misc/uinput/
+[    1.638380] trampoline: Initializing device /sys/devices/virtual/misc/uinput/
+[    1.638471] trampoline: Initializing device /sys/devices/virtual/misc/uinput//power
+[    1.638532] trampoline: Scanning mr_init_device for /sys/devices/virtual/input* (len:27)
+[    1.638545] trampoline: Initializing device /sys/devices/virtual/input
+[    1.638556] trampoline: Initializing device /sys/devices/virtual/input
+[    1.638598] trampoline: Initializing device /sys/devices/virtual/input/mice
+[    1.638692] trampoline: Initializing device /sys/devices/virtual/input/mice/power
+[    1.638747] trampoline: Initializing device /sys/devices/virtual/input/input6
+[    1.638843] trampoline: Initializing device /sys/devices/virtual/input/input6/id
+[    1.638895] trampoline: Initializing device /sys/devices/virtual/input/input6/power
+[    1.638946] trampoline: Initializing device /sys/devices/virtual/input/input6/event6
+[    1.639042] trampoline: Initializing device /sys/devices/virtual/input/input6/event6/power
+[    1.639099] trampoline: Initializing device /sys/devices/virtual/input/input6/capabilities
+[    1.639158] trampoline: Scanning mr_init_device for /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input* (len:50)
+[    1.639172] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input
+[    1.639183] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input
+[    1.639258] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0
+[    1.639377] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0/id
+[    1.639441] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0/power
+[    1.639505] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0/event0
+[    1.639627] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0/event0/power
+[    1.639694] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0/capabilities
+[    1.639764] trampoline: Scanning mr_init_device for /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0 (len:56)
+[    1.639777] trampoline: Initializing device /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/input/input0
+[    1.639868] trampoline: Scanning mr_init_device for /sys/class/tty/ptmx (len:19)
+[    1.639880] trampoline: Initializing device /sys/class/tty/ptmx
+[    1.639997] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p23 (len:81)
+[    1.640011] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p23
+[    1.640040] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24 (len:81)
+[    1.640053] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24
+[    1.640080] trampoline: Scanning mr_init_device for /sys/class/misc/android_adb (len:27)
+[    1.640092] trampoline: Initializing device /sys/class/misc/android_adb
+[    1.640121] trampoline: Scanning mr_init_device for /sys/class/android_usb/android0* (len:32)
+[    1.640134] trampoline: Initializing device /sys/class/android_usb/android0
+[    1.640145] trampoline: Initializing device /sys/class/android_usb/android0
+[    1.640280] trampoline: Initializing device /sys/class/android_usb/android0/f_serial
+[    1.640394] trampoline: Initializing device /sys/class/android_usb/android0/f_serial/power
+[    1.640473] trampoline: Initializing device /sys/class/android_usb/android0/f_usb_mbim
+[    1.640572] trampoline: Initializing device /sys/class/android_usb/android0/f_usb_mbim/power
+[    1.640651] trampoline: Initializing device /sys/class/android_usb/android0/f_rmnet_smd
+[    1.640748] trampoline: Initializing device /sys/class/android_usb/android0/f_rmnet_smd/power
+[    1.640826] trampoline: Initializing device /sys/class/android_usb/android0/f_acm
+[    1.640926] trampoline: Initializing device /sys/class/android_usb/android0/f_acm/power
+[    1.641004] trampoline: Initializing device /sys/class/android_usb/android0/f_ecm
+[    1.641104] trampoline: Initializing device /sys/class/android_usb/android0/f_ecm/power
+[    1.641183] trampoline: Initializing device /sys/class/android_usb/android0/f_ffs
+[    1.641281] trampoline: Initializing device /sys/class/android_usb/android0/f_ffs/power
+[    1.641359] trampoline: Initializing device /sys/class/android_usb/android0/f_gps
+[    1.641457] trampoline: Initializing device /sys/class/android_usb/android0/f_gps/power
+[    1.641536] trampoline: Initializing device /sys/class/android_usb/android0/f_ncm
+[    1.641635] trampoline: Initializing device /sys/class/android_usb/android0/f_ncm/power
+[    1.641713] trampoline: Initializing device /sys/class/android_usb/android0/f_mtp
+[    1.641820] trampoline: Initializing device /sys/class/android_usb/android0/f_mtp/power
+[    1.641898] trampoline: Initializing device /sys/class/android_usb/android0/f_ptp
+[    1.641996] trampoline: Initializing device /sys/class/android_usb/android0/f_ptp/power
+[    1.642127] trampoline: Initializing device /sys/class/android_usb/android0/power
+[    1.642204] trampoline: Initializing device /sys/class/android_usb/android0/f_mass_storage
+[    1.642306] trampoline: Initializing device /sys/class/android_usb/android0/f_mass_storage/power
+[    1.642384] trampoline: Initializing device /sys/class/android_usb/android0/f_audio
+[    1.642481] trampoline: Initializing device /sys/class/android_usb/android0/f_audio/power
+[    1.642559] trampoline: Initializing device /sys/class/android_usb/android0/f_rmnet
+[    1.642658] trampoline: Initializing device /sys/class/android_usb/android0/f_rmnet/power
+[    1.642736] trampoline: Initializing device /sys/class/android_usb/android0/f_rndis
+[    1.642843] trampoline: Initializing device /sys/class/android_usb/android0/f_rndis/power
+[    1.642925] trampoline: Initializing device /sys/class/android_usb/android0/f_ccid
+[    1.643023] trampoline: Initializing device /sys/class/android_usb/android0/f_ccid/power
+[    1.643101] trampoline: Initializing device /sys/class/android_usb/android0/f_diag
+[    1.643210] trampoline: Initializing device /sys/class/android_usb/android0/f_diag/power
+[    1.643287] trampoline: Initializing device /sys/class/android_usb/android0/f_midi
+[    1.643385] trampoline: Initializing device /sys/class/android_usb/android0/f_midi/power
+[    1.643465] trampoline: Initializing device /sys/class/android_usb/android0/f_qdss
+[    1.643563] trampoline: Initializing device /sys/class/android_usb/android0/f_qdss/power
+[    1.643641] trampoline: Initializing device /sys/class/android_usb/android0/f_uasp
+[    1.643738] trampoline: Initializing device /sys/class/android_usb/android0/f_uasp/power
+[    1.643817] trampoline: Initializing device /sys/class/android_usb/android0/f_audio_source
+[    1.643916] trampoline: Initializing device /sys/class/android_usb/android0/f_audio_source/power
+[    1.643994] trampoline: Initializing device /sys/class/android_usb/android0/f_rndis_qc
+[    1.644098] trampoline: Initializing device /sys/class/android_usb/android0/f_rndis_qc/power
+[    1.644177] trampoline: Initializing device /sys/class/android_usb/android0/f_charging
+[    1.644275] trampoline: Initializing device /sys/class/android_usb/android0/f_charging/power
+[    1.644353] trampoline: Initializing device /sys/class/android_usb/android0/f_accessory
+[    1.644451] trampoline: Initializing device /sys/class/android_usb/android0/f_accessory/power
+[    1.644529] trampoline: Initializing device /sys/class/android_usb/android0/f_ecm_qc
+[    1.644638] trampoline: Initializing device /sys/class/android_usb/android0/f_ecm_qc/power
+[    1.644729] trampoline: Scanning mr_init_device for /sys/class/android_usb/android0/f_adb (len:37)
+[    1.644742] trampoline: Initializing device /sys/class/android_usb/android0/f_adb
+[    1.644778] trampoline: Scanning mr_init_device for /sys/bus/platform/drivers/android_usb (len:37)
+[    1.644790] trampoline: Initializing device /sys/bus/platform/drivers/android_usb
+[    1.644862] trampoline: Scanning mr_init_device for /sys/bus/usb (len:12)
+[    1.644874] trampoline: Initializing device /sys/bus/usb
+[    1.644939] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p25 (len:81)
+[    1.644952] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p25
+[    1.644982] trampoline: Scanning mr_init_device for /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1 (len:80)
+[    1.644995] trampoline: Initializing device /sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1
+[    1.645022] trampoline: Scanning mr_init_device for /sys/devices/platform/msm_hsusb_host* (len:37)
+[    1.645036] trampoline: Initializing device /sys/devices/platform/msm_hsusb_host
+[    1.645047] trampoline: Initializing device /sys/devices/platform/msm_hsusb_host
+[    1.645133] trampoline: Initializing device /sys/devices/platform/msm_hsusb_host/power
+[    1.645198] trampoline: Initializing device /sys/devices/virtual/mem/null
+[    1.645296] trampoline: Initializing device /sys/devices/virtual/misc/fuse
+[    1.645456] trampoline: Done initializing
+[    1.645488] trampoline: Loading fstab "/mrom.fstab"...
+[    1.645616] trampoline: Dumping fstab:
+[    1.645628] trampoline: version: 1
+[    1.645637] trampoline: count: 8
+[    1.645647] trampoline: Partition 0:
+[    1.645657] trampoline:     path: /boot
+[    1.645667] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/boot
+[    1.645677] trampoline:     type: emmc
+[    1.645689] trampoline:     mountflags: 0x0
+[    1.645709] trampoline:     options: (null)
+[    1.645720] trampoline:     options2: (null)
+[    1.645730] trampoline: Partition 1:
+[    1.645739] trampoline:     path: /recovery
+[    1.645750] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/recovery
+[    1.645759] trampoline:     type: emmc
+[    1.645770] trampoline:     mountflags: 0x0
+[    1.645780] trampoline:     options: (null)
+[    1.645790] trampoline:     options2: (null)
+[    1.645799] trampoline: Partition 2:
+[    1.645808] trampoline:     path: /system
+[    1.645819] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/system
+[    1.645829] trampoline:     type: ext4
+[    1.645839] trampoline:     mountflags: 0x0
+[    1.645849] trampoline:     options: (null)
+[    1.645859] trampoline:     options2: (null)
+[    1.645868] trampoline: Partition 3:
+[    1.645878] trampoline:     path: /data
+[    1.645888] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/userdata
+[    1.645897] trampoline:     type: ext4
+[    1.645908] trampoline:     mountflags: 0x0
+[    1.645918] trampoline:     options: (null)
+[    1.645928] trampoline:     options2: (null)
+[    1.645937] trampoline: Partition 4:
+[    1.645946] trampoline:     path: /cache
+[    1.645957] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/cache
+[    1.645966] trampoline:     type: ext4
+[    1.645977] trampoline:     mountflags: 0x0
+[    1.645987] trampoline:     options: (null)
+[    1.645996] trampoline:     options2: (null)
+[    1.646006] trampoline: Partition 5:
+[    1.646015] trampoline:     path: /usb-otg
+[    1.646025] trampoline:     device: /dev/block/sda1
+[    1.646035] trampoline:     type: vfat
+[    1.646045] trampoline:     mountflags: 0x0
+[    1.646055] trampoline:     options: /dev/block/sda
+[    1.646065] trampoline:     options2: (null)
+[    1.646074] trampoline: Partition 6:
+[    1.646084] trampoline:     path: /persist
+[    1.646094] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/persist
+[    1.646104] trampoline:     type: ext4
+[    1.646114] trampoline:     mountflags: 0x0
+[    1.646124] trampoline:     options: (null)
+[    1.646134] trampoline:     options2: (null)
+[    1.646143] trampoline: Partition 7:
+[    1.646153] trampoline:     path: /firmware
+[    1.646163] trampoline:     device: /dev/block/platform/soc.0/7824900.sdhci/by-name/modem
+[    1.646173] trampoline:     type: vfat
+[    1.646183] trampoline:     mountflags: 0x0
+[    1.646193] trampoline:     options: (null)
+[    1.646203] trampoline:     options2: (null)
+[    1.646215] trampoline: Accessing dev /dev/block/platform/soc.0/7824900.sdhci/by-name/userdata 
+[    1.646237] trampoline: Waiting for /dev/block/platform/soc.0/7824900.sdhci/by-name/userdata, errono:2 (No such file or directory) 
+[    1.762501] mmc0: BKOPS_EN bit = 0
+[    1.770937] mmc0: new HS200 MMC card at address 0001
+[    1.771256] mmcblk0: mmc0:0001 R1J96N 14.6 GiB 
+[    1.771387] mmcblk0rpmb: mmc0:0001 R1J96N partition 3 4.00 MiB
+[    1.773325]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28 p29 p30
+[    1.775969] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    1.776005] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    1.776345] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    1.776365] msm8x16-asoc-wcd sound.68: default codec configured
+[    1.778172] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    1.778197] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    1.778228] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    1.930627] EXT4-fs (mmcblk0p30): mounted filesystem with ordered data mode. Opts: (null)
+[    1.940190] trampoline: Starting adbd
+[    1.940718] trampoline: Running multirom with Command: |¬À¾
+[    1.948823] multirom: Running MultiROM v33
+[    1.948992] multirom: Loading MultiROM status...
+[    1.949021] multirom: Loading fstab "/mrom.fstab"...
+[    1.951830] multirom: Adding ROM Internal
+[    1.955884] multirom: Adding ROM tipsy-wt88047-6.0.1.Judas.
+[    1.958845] multirom: multirom_get_internal:929 Found Internal rom and return it :0xac050 
+[    1.960267] multirom: multirom_get_rom:939 To get rom Internal 
+[    1.960284] multirom: multirom_get_rom:941 To get Internal rom Internal 
+[    1.960300] multirom: multirom_get_internal:929 Found Internal rom and return it :0xac050 
+[    1.960312] multirom: multirom_get_rom:939 To get rom tipsy-wt88047-6.0.1.Judas. 
+[    1.960328] multirom: multirom_get_internal:929 Found Internal rom and return it :0xac050 
+[    1.960341] multirom: Dumping multirom status:
+[    1.960351] multirom:   is_second_boot=0
+[    1.960363] multirom:   is_running_in_primary_rom=1
+[    1.960373] multirom:   current_rom=Internal
+[    1.960382] multirom:   colors_v2=0
+[    1.960392] multirom:   brightness=40
+[    1.960402] multirom:   enable_adb=1
+[    1.960411] multirom:   rotation=0
+[    1.960421] multirom:   force_generic_fb=1
+[    1.960449] multirom:   anim_duration_coef=1.000000
+[    1.960461] multirom:   hide_internal=0
+[    1.960471] multirom:   int_display_name=Internal
+[    1.960482] multirom:   auto_boot_seconds=5
+[    1.960492] multirom:   auto_boot_rom=tipsy-wt88047-6.0.1.Judas.
+[    1.960502] multirom:   auto_boot_type=4
+[    1.960512] multirom:   curr_rom_part=NULL
+[    1.960519] multirom: 
+[    1.960528] multirom:   ROM: Internal
+[    1.960538] multirom:     base_path: /realdata/media/0/multirom/roms/Internal
+[    1.960549] multirom:     icon_path: /realdata/media/0/multirom/icons/romic_android.png
+[    1.960559] multirom:     type: 0
+[    1.960568] multirom:     has_bootimg: 0
+[    1.960578] multirom:   ROM: tipsy-wt88047-6.0.1.Judas.
+[    1.960588] multirom:     base_path: /realdata/media/0/multirom/roms/tipsy-wt88047-6.0.1.Judas.
+[    1.960599] multirom:     icon_path: /realdata/media/0/multirom/icons/romic_default.png
+[    1.960608] multirom:     type: 1
+[    1.960618] multirom:     has_bootimg: 1
+[    1.960656] multirom: /proc/config.gz is not available!
+[    1.961317] enable_store: android_usb: already disabled
+[    1.961684] trampoline: Failed to open file /sys/devices/platform/android_usb/usb_function_switch (2: No such file or directory)
+[    1.967985] multirom: ROM has kexec yes...
+[    1.982232] read descriptors
+[    1.982249] read strings
+[    2.215008] mmc1: new ultra high speed SDR50 SDHC card at address aaaa
+[    2.215290] mmcblk1: mmc1:aaaa SL32G 29.7 GiB 
+[    2.224358]  mmcblk1: p1
+[    2.224678] spmi msm8x16_wcd_codec-edc40e00: Driver wcd-spmi-core requests probe deferral
+[    2.224715] spmi msm8x16_wcd_codec-edc41000: Driver wcd-spmi-core requests probe deferral
+[    2.225050] msm8x16-asoc-wcd sound.68: msm8x16_asoc_machine_probe: missing qcom,msm-mclk-freq in dt node
+[    2.225070] msm8x16-asoc-wcd sound.68: default codec configured
+[    2.226878] msm8x16-asoc-wcd sound.68: ASoC: CODEC (null) not registered
+[    2.226905] msm8x16-asoc-wcd sound.68: snd_soc_register_card failed (-517)
+[    2.226933] platform sound.68: Driver msm8x16-asoc-wcd requests probe deferral
+[    2.451198] multirom: to_boot is assigned here ..multirom_ui:122...
+[    2.451255] multirom: No run-on-boot scripts for ROM tipsy-wt88047-6.0.1.Judas.
+[    2.451272] multirom: Loading kexec here ..multirom_prepare_for_boot:982...
+[    4.167493] mmc0: data txfr (0x00100000) error: -110 after 1509 ms
+[    4.167504] sdhci: =========== REGISTER DUMP (mmc0)===========
+[    4.167510] sdhci: Sys addr: 0x00000008 | Version:  0x00002e02
+[    4.167516] sdhci: Blk size: 0x00000200 | Blk cnt:  0x00000008
+[    4.167522] sdhci: Argument: 0x00001f80 | Trn mode: 0x0000003b
+[    4.167529] sdhci: Present:  0x01f80206 | Host ctl: 0x00000034
+[    4.167534] sdhci: Power:    0x0000000d | Blk gap:  0x00000000
+[    4.167540] sdhci: Wake-up:  0x00000000 | Clock:    0x00000007
+[    4.167546] sdhci: Timeout:  0x0000000d | Int stat: 0x00000000
+[    4.167552] sdhci: Int enab: 0x03ff800b | Sig enab: 0x03ff800b
+[    4.167557] sdhci: AC12 err: 0x00000000 | Slot int: 0x00000000
+[    4.167563] sdhci: Caps:     0x222dc8b2 | Caps_1:   0x00008004
+[    4.167569] sdhci: Cmd:      0x0000123a | Max curr: 0x00000000
+[    4.167575] sdhci: Resp 1:   0x00000000 | Resp 0:   0x00000900
+[    4.167581] sdhci: Resp 3:   0x00000900 | Resp 2:   0x00000000
+[    4.167585] sdhci: Host ctl2: 0x00000003
+[    4.167592] sdhci: ADMA Err: 0x00000003 | ADMA Ptr: 0xaf070010
+[    4.167597] ----------- VENDOR REGISTER DUMP -----------
+[    4.167604] Data cnt: 0x00001000 | Fifo cnt: 0x00001000 | Int sts: 0x000c0000
+[    4.167611] DLL cfg:  0x06876400 | DLL sts:  0x000001c4 | SDCC ver: 0x1000002e
+[    4.167619] Vndr func: 0x00000a1e | Vndr adma err : addr0: 0x00ad6000 addr1: 0x00000000
+[    4.167624] Vndr func2: 0xfa8018a8
+[    4.167643]  Test bus[0 to 3]: 0x0000c846 0x000020ce 0x00007018 0x01c002ff
+[    4.167650]  Test bus[4 to 7]: 0x00473fd8 0x0005c038 0x40000000 0xffa3ffff
+[    4.167658]  Test bus[8 to 11]: 0x47fc1604 0x40800002 0x20d3e089 0x00000cc0
+[    4.167665]  Test bus[12 to 15]: 0x1a4f0408 0x843f0180 0x0d001c00 0x00000a80
+[    4.167672]  Test bus[16 to 19]: 0x10022002 0x010f808c 0x138f3f9f 0x00000891
+[    4.167679] mmc0: clk: 177770000 clk-gated: 0 claimer: mmcqd/0rpmb pwr: 12
+[    4.167685] mmc0: rpmstatus[pltfm](runtime-suspend:usage_count:disable_depth)(0:0:0)
+[    4.167690] sdhci: ===========================================
+[    4.167765] mmcblk0rpmb: error -110 transferring data, sector 8064, nr 8, cmd response 0x900, card status 0xb00
+[    5.677952] mmc0: data txfr (0x00100000) error: -110 after 1509 ms
+[    5.677959] sdhci: =========== REGISTER DUMP (mmc0)===========
+[    5.677965] sdhci: Sys addr: 0x00000008 | Version:  0x00002e02
+[    5.677971] sdhci: Blk size: 0x00000200 | Blk cnt:  0x00000008
+[    5.677977] sdhci: Argument: 0x00001f80 | Trn mode: 0x0000003b
+[    5.677983] sdhci: Present:  0x01f80206 | Host ctl: 0x00000034
+[    5.677989] sdhci: Power:    0x0000000d | Blk gap:  0x00000000
+[    5.677995] sdhci: Wake-up:  0x00000000 | Clock:    0x00000007
+[    5.678000] sdhci: Timeout:  0x0000000d | Int stat: 0x00000000
+[    5.678006] sdhci: Int enab: 0x03ff800b | Sig enab: 0x03ff800b
+[    5.678012] sdhci: AC12 err: 0x00000000 | Slot int: 0x00000000
+[    5.678018] sdhci: Caps:     0x222dc8b2 | Caps_1:   0x00008004
+[    5.678024] sdhci: Cmd:      0x0000123a | Max curr: 0x00000000
+[    5.678030] sdhci: Resp 1:   0x00000000 | Resp 0:   0x00000900
+[    5.678035] sdhci: Resp 3:   0x00000900 | Resp 2:   0x00000000
+[    5.678040] sdhci: Host ctl2: 0x00000003
+[    5.678046] sdhci: ADMA Err: 0x00000003 | ADMA Ptr: 0xaf070010
+[    5.678051] ----------- VENDOR REGISTER DUMP -----------
+[    5.678058] Data cnt: 0x00001000 | Fifo cnt: 0x00001000 | Int sts: 0x000c0000
+[    5.678065] DLL cfg:  0x06876400 | DLL sts:  0x000001c4 | SDCC ver: 0x1000002e
+[    5.678072] Vndr func: 0x00000a1e | Vndr adma err : addr0: 0x00ad6000 addr1: 0x00000000
+[    5.678077] Vndr func2: 0xfa8018a8
+[    5.678096]  Test bus[0 to 3]: 0x0000c846 0x000000ce 0x00007018 0x01c002ff
+[    5.678103]  Test bus[4 to 7]: 0x00473fd8 0x0005c038 0x00000000 0xffa3ffff
+[    5.678110]  Test bus[8 to 11]: 0x47fc1604 0x40800002 0x2023e089 0x00000cc0
+[    5.678118]  Test bus[12 to 15]: 0x044f0408 0x803f0180 0x0d000000 0x00000a80
+[    5.678125]  Test bus[16 to 19]: 0x00020002 0x010f808c 0x138f3f9f 0x00001091
+[    5.678132] mmc0: clk: 177770000 clk-gated: 0 claimer: mmcqd/0rpmb pwr: 12
+[    5.678138] mmc0: rpmstatus[pltfm](runtime-suspend:usage_count:disable_depth)(0:0:0)
+[    5.678143] sdhci: ===========================================
+[    5.678218] mmcblk0rpmb: error -110 transferring data, sector 8064, nr 8, cmd response 0x900, card status 0xb00
+[    5.678229] end_request: I/O error, dev mmcblk0rpmb, sector 8064
+[    5.678237] Buffer I/O error on device mmcblk0rpmb, logical block 1008
+[    7.188318] mmcblk0rpmb: error -110 transferring data, sector 8064, nr 8, cmd response 0x900, card status 0xb00
+[    7.188331] end_request: I/O error, dev mmcblk0rpmb, sector 8064
+[    7.188338] Buffer I/O error on device mmcblk0rpmb, logical block 1008
+[    8.700973] mmcblk0rpmb: error -110 transferring data, sector 0, nr 32, cmd response 0x900, card status 0xb00
+[    8.700985] end_request: I/O error, dev mmcblk0rpmb, sector 0
+[    8.700992] Buffer I/O error on device mmcblk0rpmb, logical block 0
+[    8.701006] end_request: I/O error, dev mmcblk0rpmb, sector 8
+[    8.701013] Buffer I/O error on device mmcblk0rpmb, logical block 1
+[    8.701020] end_request: I/O error, dev mmcblk0rpmb, sector 16
+[    8.701026] Buffer I/O error on device mmcblk0rpmb, logical block 2
+[    8.701033] end_request: I/O error, dev mmcblk0rpmb, sector 24
+[    8.701038] Buffer I/O error on device mmcblk0rpmb, logical block 3
+[   10.211085] mmcblk0rpmb: error -110 transferring data, sector 0, nr 8, cmd response 0x900, card status 0xb00
+[   10.211094] end_request: I/O error, dev mmcblk0rpmb, sector 0
+[   10.211101] Buffer I/O error on device mmcblk0rpmb, logical block 0
+[   10.309554] FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[   10.309600] multirom: Found part mmcblk1p1: BD2A-89DB, vfat
+[   10.309632] multirom: Going for Loading kexec here ..multirom_load_kexec:1640...
+[   10.309653] multirom: Filling exec android here ..multirom_load_kexec:1653...
+[   10.386999] multirom: No need to update trampoline.
+[   10.426983] multirom: Loading kexec here ..multirom_load_kexec:1672...
+[   10.427005] multirom: Loading kexec:
+[   10.427016] multirom:     /realdata/media/0/multirom/kexec
+[   10.427025] multirom:     --mem-min=0x85F00000
+[   10.427034] multirom:     --boardname=wt88047
+[   10.427043] multirom:     --load-hardboot
+[   10.427052] multirom:     /zImage
+[   10.427060] multirom:     --initrd=/initrd.img
+[   10.427069] multirom:     --dtb=/dtb.img
+[   10.427084] multirom:     --command-line=console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 phy-msm-usb.floated_charger_enable=1 androidboot.emmc=true androidboot.serialno=2d00840b androidboot.baseband=msm mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_otm1285a_otp_720p_video board_id=S88047C1:board_vol=1050462 mrom_kexecd=1
+[   10.483560] multirom: Loading kexec success here ..multirom_load_kexec:1683...
+[   10.483588] multirom: type:1 Android found here ..multirom_prepare_for_boot:1008...
+[   10.483602] multirom: MultiromSaysNextBootShouldBeSecondMagic108
+[   10.483614] multirom: Saving multirom status
+[   10.501155] multirom: 
+[   10.501155] 
+[   10.501155] 
+[   10.501155] ****** multirom:236 multirom returned exit status :34 *******
+[   10.501155] 
+[   10.501155] 
+[   10.501287] SysRq : Emergency Remount R/O
+[   10.504290] EXT4-fs (mmcblk0p30): re-mounted. Opts: (null)
+[   10.504796] Emergency Remount complete
+[   10.505270] mdss_fb_release_all: try to close unopened fb 1! from kexec
+[   10.505282] mdss_fb_release_all: try to close unopened fb 0! from kexec
+[   10.506244] SMB:smb1360_shutdown: smb1360 power off
+[   10.506599] Starting new kernel
+[   10.506605] Disabling non-boot CPUs ...
+[   10.506679] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.506690] CPU: 0 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.506714] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.506728] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.506741] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.506753] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.506764] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.506778] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c013a4f8>] (flush_work+0xd4/0xfc)
+[   10.506790] [<c013a4f8>] (flush_work+0xd4/0xfc) from [<c0b6e1d0>] (workqueue_cpu_down_callback+0x80/0x9c)
+[   10.506803] [<c0b6e1d0>] (workqueue_cpu_down_callback+0x80/0x9c) from [<c01437dc>] (notifier_call_chain+0x40/0x68)
+[   10.506816] [<c01437dc>] (notifier_call_chain+0x40/0x68) from [<c0123b68>] (__cpu_notify+0x28/0x44)
+[   10.506829] [<c0123b68>] (__cpu_notify+0x28/0x44) from [<c0b6982c>] (_cpu_down+0x7c/0x2c0)
+[   10.506843] [<c0b6982c>] (_cpu_down+0x7c/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.506856] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.506867] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.506880] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.507078] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.507088] CPU: 0 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.507103] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.507115] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.507127] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.507137] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.507149] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.507160] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c013f0e8>] (kthread_park+0x64/0x70)
+[   10.507173] [<c013f0e8>] (kthread_park+0x64/0x70) from [<c0145f38>] (smpboot_park_threads+0x54/0x74)
+[   10.507186] [<c0145f38>] (smpboot_park_threads+0x54/0x74) from [<c0b6986c>] (_cpu_down+0xbc/0x2c0)
+[   10.507200] [<c0b6986c>] (_cpu_down+0xbc/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.507212] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.507223] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.507234] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.507259] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.507267] CPU: 0 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.507279] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.507291] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.507302] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.507313] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.507324] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.507337] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c0186148>] (__stop_cpus+0x48/0x60)
+[   10.507349] [<c0186148>] (__stop_cpus+0x48/0x60) from [<c01864b0>] (stop_cpus+0x2c/0x44)
+[   10.507362] [<c01864b0>] (stop_cpus+0x2c/0x44) from [<c01865d0>] (__stop_machine+0xb8/0xd4)
+[   10.507375] [<c01865d0>] (__stop_machine+0xb8/0xd4) from [<c0b69890>] (_cpu_down+0xe0/0x2c0)
+[   10.507388] [<c0b69890>] (_cpu_down+0xe0/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.507399] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.507410] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.507421] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.508500] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.508511] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.508528] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.508540] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.508552] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.508563] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.508574] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.508586] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c013a4f8>] (flush_work+0xd4/0xfc)
+[   10.508599] [<c013a4f8>] (flush_work+0xd4/0xfc) from [<c0b6e1d0>] (workqueue_cpu_down_callback+0x80/0x9c)
+[   10.508611] [<c0b6e1d0>] (workqueue_cpu_down_callback+0x80/0x9c) from [<c01437dc>] (notifier_call_chain+0x40/0x68)
+[   10.508622] [<c01437dc>] (notifier_call_chain+0x40/0x68) from [<c0123b68>] (__cpu_notify+0x28/0x44)
+[   10.508635] [<c0123b68>] (__cpu_notify+0x28/0x44) from [<c0b6982c>] (_cpu_down+0x7c/0x2c0)
+[   10.508647] [<c0b6982c>] (_cpu_down+0x7c/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.508659] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.508670] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.508682] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.508790] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.508799] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.508813] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.508824] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.508835] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.508846] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.508857] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.508869] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c013f0e8>] (kthread_park+0x64/0x70)
+[   10.508881] [<c013f0e8>] (kthread_park+0x64/0x70) from [<c0145f38>] (smpboot_park_threads+0x54/0x74)
+[   10.508893] [<c0145f38>] (smpboot_park_threads+0x54/0x74) from [<c0b6986c>] (_cpu_down+0xbc/0x2c0)
+[   10.508906] [<c0b6986c>] (_cpu_down+0xbc/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.508917] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.508928] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.508939] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.508958] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.508967] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.508978] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.508990] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.509001] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.509012] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.509023] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.509035] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c0186148>] (__stop_cpus+0x48/0x60)
+[   10.509047] [<c0186148>] (__stop_cpus+0x48/0x60) from [<c01864b0>] (stop_cpus+0x2c/0x44)
+[   10.509060] [<c01864b0>] (stop_cpus+0x2c/0x44) from [<c01865d0>] (__stop_machine+0xb8/0xd4)
+[   10.509072] [<c01865d0>] (__stop_machine+0xb8/0xd4) from [<c0b69890>] (_cpu_down+0xe0/0x2c0)
+[   10.509085] [<c0b69890>] (_cpu_down+0xe0/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.509096] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.509107] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.509118] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.509703] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.509713] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.509728] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.509741] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.509752] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.509763] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78400>] (schedule_timeout+0x208/0x244)
+[   10.509774] [<c0b78400>] (schedule_timeout+0x208/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.509784] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c0b6ca60>] (__cpu_die+0x1c/0x68)
+[   10.509796] [<c0b6ca60>] (__cpu_die+0x1c/0x68) from [<c0b698e4>] (_cpu_down+0x134/0x2c0)
+[   10.509809] [<c0b698e4>] (_cpu_down+0x134/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.509820] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.509831] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.509842] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.510249] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.510259] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.510273] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.510284] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.510297] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.510308] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.510319] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.510331] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c013a4f8>] (flush_work+0xd4/0xfc)
+[   10.510343] [<c013a4f8>] (flush_work+0xd4/0xfc) from [<c0b6e1d0>] (workqueue_cpu_down_callback+0x80/0x9c)
+[   10.510355] [<c0b6e1d0>] (workqueue_cpu_down_callback+0x80/0x9c) from [<c01437dc>] (notifier_call_chain+0x40/0x68)
+[   10.510367] [<c01437dc>] (notifier_call_chain+0x40/0x68) from [<c0123b68>] (__cpu_notify+0x28/0x44)
+[   10.510379] [<c0123b68>] (__cpu_notify+0x28/0x44) from [<c0b6982c>] (_cpu_down+0x7c/0x2c0)
+[   10.510392] [<c0b6982c>] (_cpu_down+0x7c/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.510404] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.510415] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.510426] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.510652] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.510661] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.510674] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.510686] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.510698] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.510708] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.510719] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.510731] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c013f0e8>] (kthread_park+0x64/0x70)
+[   10.510743] [<c013f0e8>] (kthread_park+0x64/0x70) from [<c0145f38>] (smpboot_park_threads+0x54/0x74)
+[   10.510756] [<c0145f38>] (smpboot_park_threads+0x54/0x74) from [<c0b6986c>] (_cpu_down+0xbc/0x2c0)
+[   10.510768] [<c0b6986c>] (_cpu_down+0xbc/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.510780] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.510791] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.510802] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.510826] BUG: scheduling while atomic: kexec/197/0x00000002
+[   10.510834] CPU: 3 PID: 197 Comm: kexec Tainted: G        W    3.10.49-blackhawk-g27406e9-128301-gfab89b4-dirty #10
+[   10.510846] [<c010b4b4>] (unwind_backtrace+0x0/0xe0) from [<c0109368>] (show_stack+0x10/0x14)
+[   10.510858] [<c0109368>] (show_stack+0x10/0x14) from [<c0b70750>] (__schedule_bug+0x44/0x60)
+[   10.510869] [<c0b70750>] (__schedule_bug+0x44/0x60) from [<c0b798f0>] (__schedule+0x80/0x7d8)
+[   10.510880] [<c0b798f0>] (__schedule+0x80/0x7d8) from [<c0b78214>] (schedule_timeout+0x1c/0x244)
+[   10.510891] [<c0b78214>] (schedule_timeout+0x1c/0x244) from [<c0b79700>] (wait_for_common+0x11c/0x164)
+[   10.510903] [<c0b79700>] (wait_for_common+0x11c/0x164) from [<c0186148>] (__stop_cpus+0x48/0x60)
+[   10.510915] [<c0186148>] (__stop_cpus+0x48/0x60) from [<c01864b0>] (stop_cpus+0x2c/0x44)
+[   10.510928] [<c01864b0>] (stop_cpus+0x2c/0x44) from [<c01865d0>] (__stop_machine+0xb8/0xd4)
+[   10.510940] [<c01865d0>] (__stop_machine+0xb8/0xd4) from [<c0b69890>] (_cpu_down+0xe0/0x2c0)
+[   10.510953] [<c0b69890>] (_cpu_down+0xe0/0x2c0) from [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec)
+[   10.510964] [<c0123e28>] (disable_nonboot_cpus+0x6c/0xec) from [<c017fa48>] (kernel_kexec+0x44/0x74)
+[   10.510975] [<c017fa48>] (kernel_kexec+0x44/0x74) from [<c01345c8>] (SyS_reboot+0x168/0x1d0)
+[   10.510986] [<c01345c8>] (SyS_reboot+0x168/0x1d0) from [<c0105ac0>] (ret_fast_syscall+0x0/0x30)
+[   10.511943] Bye!
