@@ -31,6 +31,7 @@ BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8916
 TARGET_KERNEL_CONFIG := cyanogenmod_wt88047_defconfig
 
+
 # CPU
 TARGET_CPU_CORTEX_A53 := true
 
@@ -92,7 +93,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5939100672
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
-#TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
@@ -112,6 +113,7 @@ TW_THEME := portrait_hdpi
 
 #MultiROM config. MultiROM also uses parts of TWRP config
 MR_CONTINUOUS_FB_UPDATE := true
+MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := $(DEVICE_PATH)/multirom/mrom.fstab

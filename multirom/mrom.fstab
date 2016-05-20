@@ -1,23 +1,9 @@
-/boot       emmc        /dev/block/platform/soc.0/7824900.sdhci/by-name/boot
-/recovery   emmc        /dev/block/platform/soc.0/7824900.sdhci/by-name/recovery
-/system     ext4        /dev/block/platform/soc.0/7824900.sdhci/by-name/system
-/data       ext4        /dev/block/platform/soc.0/7824900.sdhci/by-name/userdata   
-/cache      ext4        /dev/block/platform/soc.0/7824900.sdhci/by-name/cache
-/usb-otg    vfat        /dev/block/sda1    /dev/block/sda
-/persist    ext4        /dev/block/platform/soc.0/7824900.sdhci/by-name/persist
-/firmware   vfat        /dev/block/platform/soc.0/7824900.sdhci/by-name/modem
+/boot           emmc    /dev/block/mmcblk0p22
+/recovery       emmc    /dev/block/mmcblk0p26
+/system         ext4    /dev/block/mmcblk0p23
+/data           ext4    /dev/block/mmcblk0p30
+/data           f2fs    /dev/block/mmcblk0p30
+/cache          ext4    /dev/block/mmcblk0p24
+/persist        ext4    /dev/block/mmcblk0p25
+/firmware       ext4    /dev/block/mmcblk0p1
 
-
-
-
-
-
-#/boot		emmc /dev/block/mmcblk0p22
-#/data		ext4 /dev/block/mmcblk0p30 	noatime,nosuid,barrier=1,noauto_da_alloc 	wait,check,formattable,encryptable=footer
-#/system		ext4 /dev/block/mmcblk0p23
-#/boot		emmc /dev/block/platform/soc.0/7824900.sdhci/by-name/boot
-#/data		ext4 /dev/block/platform/soc.0/7824900.sdhci/by-name/userdata  noatime,nosuid,barrier=1,noauto_da_alloc     wait,check,formattable,encryptable=/dev/block/platform/soc.0/by-name/bk1
-#/system		ext4 /dev/block/platform/soc.0/7824900.sdhci/by-name/system
-
-#/external_sd  vfat    /dev/block/mmcblk1p1                               flags=display="External SD";storage;wipeingui;removable
-#/usb_storage  vfat    /dev/block/sda1 /dev/block/sda                     flags=display="USB Storage";storage;wipeingui;removable
