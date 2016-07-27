@@ -60,6 +60,7 @@ const char *mr_init_devices[] =
     "/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1", // firmware
 
     // USB Drive is in here
+    "/sys/devices/soc.0/7864900.sdhci/mmc_host/mmc1/mmc1:aaaa/block/mmcblk1/mmcblk1p1", // sdcard
     "/sys/devices/platform/msm_hsusb_host*",
 
 
